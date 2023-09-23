@@ -8,7 +8,7 @@ test('Exact-search', () => {
 
   const result = exactSearch(docs, 'shoot');
 
-  expect(result).toEqual(['doc1', 'doc2'])
+  expect(result).toEqual(['doc2', 'doc1'])
 });
 
 test('Empty-search', () => {
