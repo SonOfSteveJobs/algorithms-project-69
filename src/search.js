@@ -1,4 +1,13 @@
-import { calculateIDF, calculateTF, findSumTFIDFbyDocId, getInvertedIndex, getRidOfSymbols, getTF } from "./helpers";
+const {
+  findSumTFIDFbyDocId,
+  getTF,
+  calculateIDF,
+  calculateTF,
+  getInvertedIndex,
+  getRidOfSymbols
+} = require("./helpers");
+
+
 
 const WORD_REGEXP = /([a-zA-Z]+)|([0-9]+)/g;
 
@@ -54,4 +63,4 @@ const search = (docs) => {
   };
 };
 
-export default search;
+module.exports = search;

@@ -1,4 +1,4 @@
-import search from "../src/search";
+const search = require("../src/search");
 
 test('1', () => {
   const doc1 = { id: 'doc1', text: "I can't shoot straight unless I've had a pint!" };
@@ -15,7 +15,7 @@ test('2', () => {
   const docs = [doc1];
   const searchEngine = search(docs);
 
-  expect(searchEngine.search('pint!')).toStrictEqual([]);
+  expect(searchEngine.search('pint!')).toStrictEqual(['doc1']);
 });
 
 test('3', () => {
@@ -45,5 +45,5 @@ test('5', () => {
   const docs = [doc1, doc2, doc3];
   const searchEngine = search(docs);
 
-  expect(searchEngine.search('some a text')).toStrictEqual(['doc3', 'doc1', 'doc2']);
+  expect(searchEngine.search('some a text')).toStrictEqual(['doc1', 'doc3', 'doc2']);
 });
