@@ -4,12 +4,13 @@
   "description": "[![Actions Status](https://github.com/SonOfSteveJobs/algorithms-project-69/workflows/hexlet-check/badge.svg)](https://github.com/SonOfSteveJobs/algorithms-project-69/actions)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.5",
     "eslint": "^8.50.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.28.1",
