@@ -25,3 +25,12 @@ test('Pint!-search', () => {
 
   expect(result).toEqual(['doc1'])
 });
+
+test('Pint-search', () => {
+  const doc1 = { id: 'doc1', text: "I can't shoot straight unless I've had a pint!" };
+  const docs = [doc1];
+
+  const result = exactSearch(docs, 'pint');
+
+  expect(result).toEqual(['doc1']);
+});
